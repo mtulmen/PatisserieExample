@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Cakes";
+
+}
+@model List<DataAccessLayer.MyEntities.Cake>
+
+<link href="~/Content/style.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/custom.js"></script>
+<h2>Cakes</h2><br />
+
+<div class="outer-container home-page">
+    <div class="container-fluid">
+        <div class="row">
+        @{ foreach (var item in Model)
+            {
+            <div class="col-12 col-md-6 col-lg-3 some-margin">
+                <div class="portfolio-content">
+                    <figure>
+                        <img src="/images/@item.ImageUrl" alt="">
+                    </figure>
+
+                    <div class="entry-content flex flex-column align-items-center justify-content-center">
+                        <div>
+                            <h3 style="text-align:left;margin-bottom:25px;"><a href="Detail/@item.Id">@item.Name</a></h3>
+                            <h4 style="text-align:left;opacity:0.5">@item.Description</h4>
+                        </div>
+                       
+
+                    </div><!-- .entry-content -->
+                   
+                </div><!-- .portfolio-content -->
+            </div><!-- .col -->
+                }
+            }
+        </div><!-- .row -->
+    </div><!-- .container-fluid -->
+</div><!-- .outer-container -->

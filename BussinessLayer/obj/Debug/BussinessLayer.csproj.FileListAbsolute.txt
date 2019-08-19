@@ -1,0 +1,17 @@
+C:\Users\Sem\Desktop\mywebapps\myPatisserie\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\Sem\Desktop\mywebapps\myPatisserie\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\Sem\Desktop\mywebapps\myPatisserie\BussinessLayer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sem\Desktop\mywebapps\myPatisserie\BussinessLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sem\Desktop\mywebapps\myPatisserie\BussinessLayer\obj\Debug\BussinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Sem\Desktop\mywebapps\myPatisserie\BussinessLayer\obj\Debug\BussinessLayer.csproj.CopyComplete
+C:\Users\Sem\Desktop\mywebapps\myPatisserie\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\Sem\Desktop\mywebapps\myPatisserie\BussinessLayer\obj\Debug\BussinessLayer.pdb
+E:\10-07-19-mvc\myPatisserie-3\BussinessLayer\bin\Debug\BussinessLayer.dll
+E:\10-07-19-mvc\myPatisserie-3\BussinessLayer\bin\Debug\BussinessLayer.pdb
+E:\10-07-19-mvc\myPatisserie-3\BussinessLayer\bin\Debug\Newtonsoft.Json.dll
+E:\10-07-19-mvc\myPatisserie-3\BussinessLayer\bin\Debug\Newtonsoft.Json.xml
+E:\10-07-19-mvc\myPatisserie-3\BussinessLayer\obj\Debug\BussinessLayer.csprojAssemblyReference.cache
+E:\10-07-19-mvc\myPatisserie-3\BussinessLayer\obj\Debug\BussinessLayer.csproj.CoreCompileInputs.cache
+E:\10-07-19-mvc\myPatisserie-3\BussinessLayer\obj\Debug\BussinessLayer.csproj.CopyComplete
+E:\10-07-19-mvc\myPatisserie-3\BussinessLayer\obj\Debug\BussinessLayer.dll
+E:\10-07-19-mvc\myPatisserie-3\BussinessLayer\obj\Debug\BussinessLayer.pdb

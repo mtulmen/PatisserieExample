@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        if(@ViewBag.hatali=="1")
+    {
+        $("#alan").html("kullanıcı adı veya password hatalı");
+    }
+    });
+
+</script>
+
+<div id="alan">Login</div>
+
+@using (Html.BeginForm())
+{
+    <div>
+        <div class="form-group">
+            <div>
+                User Name
+            </div>
+            <div>
+                <input type="text" placeholder="User Name" id="UserName" name="UserName" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div>
+                Password
+            </div>
+            <div>
+                <input type="text" id="Password" name="Password" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <div>
+                <input type="submit" class="form-control" />
+            </div>
+        </div>
+
+    </div>
+
+}
+

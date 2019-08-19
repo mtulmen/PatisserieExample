@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2>My Patisserie</h2><br />
+
+@Html.ActionLink("My Cakes", "Cakes", "Patisserie")
+ 
+
+@if (Session["userName"]!=null)
+{
+@Html.ActionLink("Users", "Index", "User")
+}

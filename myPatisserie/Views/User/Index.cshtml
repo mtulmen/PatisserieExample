@@ -1,0 +1,45 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script>
+    function submitMyForm() {
+        if ($('#filterEmail').val().length > 0 && $('#filterEmail').val().length < 3) {
+            alert("email must be 3 char at least");
+            return;
+        }
+        $('#filterForm').submit();
+    }
+
+    function refreshGrid() {
+        var filterName = $("#filterName").val();
+        var filterEmail = $("#filterEmail").val();
+        $('#divUserList').html('<img src="/images/loading.gif" />');
+        $('#divUserList').load("/User/UserListPartial?filterName=" + filterName + "&filterEmail=" + filterEmail);
+        //$('#divUserList').load("http://www.milliyet.com");
+    }
+</script>
+
+<h2>Index</h2>
+<div>
+    <img width="300" src="~/images/11.jpg" />
+    <img width="300" src="~/images/1.jpg" />
+    <img width="300" src="~/images/10.jpg" />
+</div>
+<p>
+    @Html.ActionLink("Create New", "AddUser")
+</p>
+
+<form id="filterForm" method="post">
+    <div class="form-group">UserName:<input type="text" name="filterName" id="filterName" /></div>
+    <div class="form-group">Email:<input type="text" name="filterEmail" id="filterEmail" /></div>
+    <input onclick="submitMyForm()" type="button" value="search" />
+</form>
+<input type="button" onclick="refreshGrid()" value="refresh" />
+<div id="divUserList">
+    @Html.Action("UsrPartialVol1")
+</div>
+
+

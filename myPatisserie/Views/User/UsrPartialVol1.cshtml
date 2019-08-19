@@ -1,0 +1,26 @@
+﻿
+@model IEnumerable<DataAccessLayer.MyEntities.User>
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(c => c.Id)</th>
+        <th>@Html.DisplayNameFor(c => c.UserName)</th>
+        <th>@Html.DisplayNameFor(c => c.Password)</th>
+        <th>@Html.DisplayNameFor(c => c.Email)</th>
+        <th>Operations</th>
+    </tr>
+    @{
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(item.Id.ToString(), "Update", "User", new { id = item.Id }, new { style = "border:1px solid red" })</td>
+                <td>@item.UserName</td>
+                <td>@item.Password</td>
+                <td>@item.Email</td>
+                <td>
+                    @Html.ActionLink("güncelle", "Update", "User", new { id = item.Id }, new { style = "" })
+                    <a href="/User/Delete/@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    }
+</table>

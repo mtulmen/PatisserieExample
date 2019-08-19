@@ -1,0 +1,46 @@
+﻿@model int
+@{
+    ViewBag.Title = "Index";
+}
+
+<form method="post" id="frm1">
+    <input type="text" placeholder="sayıgir" value="@Model" name="sayi" id="sayi" />
+    <input type="button" onclick="submitForm()" value="gönder" />
+</form>
+
+
+
+<div id="divResult">
+
+</div>
+<input type="button" value="ajax Button" onclick="doAjaxCall()" />
+<br /><br /><br /><br /><br />
+<input type="button" value="json Button" onclick="doNewAjaxCall()" />
+
+
+<h2>Index</h2>
+<script>
+    function submitForm() {
+        $('#frm1').submit();
+    }
+
+    function doNewAjaxCall() {
+        $.post("AjaxreqWithJsonResult", null, function (data) { alert(data.UserName + " " + data.Password) });
+    }
+
+    function doAjaxCall() {
+        //$.post("AjaxReq", { karesiAlinacakSayi: $('#sayi').val(),name:"ibrahim" } );
+        $.post("AjaxReq", { karesiAlinacakSayi: $('#sayi').val(), name: "ibrahim" },
+            function (data) {
+                $("#sayi").val(data);
+
+                $("#divResult").html("<span style='font-weight:Bold'>" + data + "</span>")
+
+                // $("#divResult").load("/home/index")
+            }
+        );
+    }
+    
+
+</script>
+

@@ -1,0 +1,60 @@
+﻿@model myPatisserie.Models.CakeViewModel
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>Cake</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                @Model.Name
+            </div>
+            <div>
+                @Model.Description
+            </div>
+            <div><img src="~/images/@Model.ImageUrl" /></div>
+            <div>
+                @Model.Price
+            </div>
+        </div>
+        <div id="divComs" class="col-md-6">
+            @Html.Partial("CommentsPartial", Model)
+
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<script>
+    function postComment() {
+        //$.post('/Patisserie/AddComment', $('#frm1').serialize());
+
+       
+        $.post("/Patisserie/AddComment", $("#frm1").serialize() ,
+            function (data) {
+            $('#divComs').load("/Patisserie/CommentsPartial/@Model.Id");
+                alert(data.CommentStr);
+        }
+
+        );
+        //$('#divComs').html('<img src="/images/loading.gif" />');
+       // alert("normal satırdaki bir alert");
+
+        //$.post("/Patisserie/AddComment", $('#frm1').serialize(),function (data) {
+        //    alert(data);
+        //});
+
+
+        @*$('#divComs').html('<img src="/images/loading.gif" />');
+        $('#divComs').load("/Patisserie/CommentsPartial/@Model.Id");*@
+
+    }
+</script>
